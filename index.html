@@ -277,8 +277,21 @@ body {
   font-size: 1.25rem;
   text-align: center;
   margin: 4rem auto 2rem;
-  white-space: nowrap; /* force une seule ligne */
+    max-width: 100%;
+  overflow-wrap: break-word;
 }
+
+@media (max-width: 768px) {
+
+  .slogan-fin {
+    white-space: normal;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+}
+
 
 .tous-ensemble {
   display: inline-block;
@@ -368,6 +381,33 @@ li {
 a:focus-visible {
   outline: 3px solid #F3DD5D;
   outline-offset: 4px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .header-quote {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .header-quote .photo,
+  .header-quote .quote {
+    flex: none;
+    width: 100%;
+  }
+
+  .header-quote .photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .header-quote .quote {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
 
 
