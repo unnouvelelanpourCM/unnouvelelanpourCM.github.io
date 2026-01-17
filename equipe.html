@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Notre équipe – Un nouvel élan pour Courson‑Monteloup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root {
+  --blue: #1c3478;
+  --yellow: #ebba34;
+  --light: #f7f7f7;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--blue);
+  background: white;
+}
+
+section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #555;
+}
+
+/* ✅ Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+}
+
+/* ✅ Trombinoscope */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.member {
+  cursor: pointer;
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.member:hover img,
+.member.active img {
+  border-color: var(--yellow);
+}
+
+.member-name {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ✅ Encadré biographie */
+.bio-panel {
+  border: 2px solid var(--yellow);
+  border-radius: 16px;
+  padding: 1.6rem;
+  background: var(--light);
+  min-height: 420px;
+  position: sticky;
+  top: 2rem;
+}
+
+.bio-panel h3 {
+  margin-top: 0;
+}
+
+.bio-panel p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ✅ Mobile */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .bio-panel {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h1>Notre équipe</h1>
+<p class="intro">
+  Une équipe de 15 femmes et hommes engagés,
+  rassemblés pour faire rayonner Courson‑Monteloup.
+</p>
+
+<div class="layout">
+
+  <!-- ✅ Trombinoscope -->
+  <div class="team-grid" id="team"></div>
+
+  <!-- ✅ Bio dynamique -->
+  <aside class="bio-panel" id="bio">
+    <h3>Sélectionnez un portrait</h3>
+    <p>
+      Survolez ou cliquez sur un membre de l’équipe
+      pour découvrir son parcours et son engagement.
+    </p>
+  </aside>
+
+</div>
+
+</section>
+
+<script>
+const team = [
+  {
+    name: "Daniel Chaintreuil",
+    bio: "Engagé depuis de nombreuses années dans la vie communale, Daniel Chaintreuil souhaite mettre son expérience, son écoute et sa connaissance du territoire au service d’un projet collectif, responsable et tourné vers l’avenir."
+  },
+
+  { name: "Prénom Nom 1", bio: "Attaché(e) à la vie locale, il/elle s’engage pour un village solidaire, dynamique et attentif aux besoins de chacun." },
+  { name: "Prénom Nom 2", bio: "Impliqué(e) dans la vie associative, il/elle souhaite renforcer le lien social et la participation citoyenne." },
+  { name: "Prénom Nom 3", bio: "Habitué(e) au travail collectif, il/elle défend des décisions utiles, réfléchies et adaptées au quotidien des habitants." },
+  { name: "Prénom Nom 4", bio: "Sensibilisé(e) aux enjeux de cadre de vie, il/elle agit pour un village agréable, propre et préservé." },
+  { name: "Prénom Nom 5", bio: "Engagé(e) sur le terrain, il/elle souhaite apporter des solutions concrètes et durables." },
+  { name: "Prénom Nom 6", bio: "À l’écoute des habitants, il/elle place le dialogue et la proximité au cœur de son engagement." },
+  { name: "Prénom Nom 7", bio: "Investi(e) dans la vie du village, il/elle œuvre pour un développement équilibré et respectueux." },
+  { name: "Prénom Nom 8", bio: "Convaincu(e) que l’action locale est essentielle, il/elle s’engage avec sérieux et détermination." },
+  { name: "Prénom Nom 9", bio: "Attaché(e) aux valeurs de transparence et de responsabilité, il/elle souhaite servir l’intérêt général." },
+  { name: "Prénom Nom 10", bio: "Disponible et impliqué(e), il/elle met son énergie au service du collectif." },
+  { name: "Prénom Nom 11", bio: "Sensibilisé(e) aux enjeux humains, il/elle défend une action municipale proche des habitants." },
+  { name: "Prénom Nom 12", bio: "Fort(e) de son expérience personnelle et professionnelle, il/elle souhaite contribuer utilement aux projets communaux." },
+  { name: "Prénom Nom 13", bio: "Motivé(e) par l’avenir du village, il/elle s’engage avec sérieux et bienveillance." },
+  { name: "Prénom Nom 14", bio: "Attaché(e) à Courson‑Monteloup, il/elle souhaite participer activement à son dynamisme." }
+];
+
+const teamContainer = document.getElementById("team");
+const bioPanel = document.getElementById("bio");
+
+team.forEach((p, i) => {
+  const div = document.createElement("div");
+  div.className = "member";
+  div.innerHTML = `
+    <img src="https://via.placeholder.com/300x300?text=Photo" alt="${p.name}">
+    <div class="member-name">${p.name}</div>
+  `;
+
+  const activate = () => {
+    document.querySelectorAll(".member").forEach(m => m.classList.remove("active"));
+    div.classList.add("active");
+    bioPanel.innerHTML = `<h3>${p.name}</h3><p>${p.bio}</p>`;
+  };
+
+  div.addEventListener("mouseenter", activate);
+  div.addEventListener("click", activate);
+
+  teamContainer.appendChild(div);
+
+  if (i === 0) activate();
+});
+</script>
+
+</body>
+</html>
+

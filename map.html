@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Un nouvel élan pour Courson‑Monteloup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style>
+:root {
+  --blue: #1c3478;
+  --yellow: #ebba34;
+  --light: #f7f7f7;
+  --dark: #111;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--blue);
+  line-height: 1.6;
+  background: white;
+}
+
+/* ✅ Sections */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ✅ Carte */
+.map-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.map-header h2 {
+  margin-bottom: 0.4rem;
+}
+
+.map-header p {
+  margin: 0;
+  color: #555;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filters label {
+  margin: 0 10px;
+  padding: 6px 12px;
+  background: var(--light);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#map {
+  height: 70vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ✅ Footer */
+footer {
+  background: var(--light);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ SECTION CARTE -->
+<section>
+
+  <!-- ✅ TITRE + TEXTE DEMANDÉS -->
+  <header class="map-header">
+    <h2>Nos engagements sur le territoire</h2>
+    <p>
+      Cliquez sur les différents lieux du village pour découvrir
+      les actions concrètes que nous proposons.
+    </p>
+  </header>
+
+  <!-- ✅ FILTRES -->
+  <div class="filters">
+    <label>
+      <input type="checkbox" checked data-layer="batiments">
+      🏛️ Bâtiments
+    </label>
+    <label>
+      <input type="checkbox" checked data-layer="routes">
+      🛣️ Routes
+    </label>
+  </div>
+
+  <!-- ✅ CARTE -->
+  <div id="map"></div>
+
+</section>
+
+<!-- ✅ FOOTER -->
+<footer>
+  © 2026 – Un nouvel élan pour Courson‑Monteloup
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+const map = L.map('map');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+const layers = {
+  batiments: L.layerGroup().addTo(map),
+  routes: L.layerGroup().addTo(map)
+};
+
+const points = [
+  {
+    coords: [48.592975, 2.144877],
+    cat: 'batiments',
+    title: '🏛️ Mairie',
+    txt: 'Rénovation et mise en valeur du bâtiment communal.'
+  },
+  {
+    coords: [48.592871, 2.145158],
+    cat: 'batiments',
+    title: '🏚️ Petite grange',
+    txt: 'Réhabilitation du patrimoine local.'
+  },
+  {
+    coords: [48.592824, 2.145166],
+    cat: 'routes',
+    title: '🛣️ Centre‑bourg',
+    txt: 'Réfection des voiries et sécurisation.'
+  },
+  {
+    coords: [48.600915, 2.156805],
+    cat: 'routes',
+    title: '🚧 La Roncière',
+    txt: 'Amélioration des accès et de la circulation.'
+  }
+];
+
+points.forEach(p => {
+  L.marker(p.coords)
+    .bindPopup(`<strong>${p.title}</strong><br>${p.txt}`)
+    .addTo(layers[p.cat]);
+});
+
+/* ✅ Limite commune */
+fetch('https://nominatim.openstreetmap.org/search?q=Courson-Monteloup,Essonne,France&format=geojson&polygon_geojson=1')
+  .then(r => r.json())
+  .then(data => {
+    const commune = L.geoJSON(data, {
+      style: { color:'#1c3478', weight:3, fillOpacity:0.08 }
+    }).addTo(map);
+
+    map.fitBounds(commune.getBounds(), { padding:[20,20] });
+    map.setMaxBounds(commune.getBounds());
+  });
+
+/* ✅ Filtres */
+document.querySelectorAll('.filters input').forEach(input => {
+  input.addEventListener('change', e => {
+    const layer = layers[e.target.dataset.layer];
+    e.target.checked
+      ? map.addLayer(layer)
+      : map.removeLayer(layer);
+  });
+});
+</script>
+
+</body>
+</html>
+
