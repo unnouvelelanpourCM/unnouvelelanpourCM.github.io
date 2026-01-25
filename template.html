@@ -108,6 +108,26 @@ ul ul li {
 /* ================= FOOTER CONTACT ================= */
 
 
+.slogan-fin {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 4rem auto 2rem;
+    max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+  .slogan-fin {
+    white-space: normal;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+}
+
 .footer-contact {
   display: flex;
   justify-content: center;
@@ -174,11 +194,6 @@ a:focus-visible {
 
 
 
-
-
-
-
-
 .tous-ensemble {
   display: inline-block;
   padding: 0.15em 0.45em;
@@ -188,25 +203,66 @@ a:focus-visible {
   font-weight: 800;
 }
 
-.slogan-fin {
-  font-weight: 700;
-  font-size: 1.25rem;
-  text-align: center;
-  margin: 4rem auto 2rem;
-    max-width: 100%;
-  overflow-wrap: break-word;
+
+
+  /* ---------- SIDE BAR ---------------*/
+
+.side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 0.6rem 0;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.side-nav a:hover {
+  color: var(--yellow);
+}
+
+.side-nav a {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
-
-  .slogan-fin {
-    white-space: normal;
-    font-size: 1.1rem;
-    padding: 0 1rem;
-    text-align: center;
+  .side-nav {
+    display: none;
   }
-
 }
+/* ---------- SIDE BAR ---------------*/
 
 
 
@@ -231,6 +287,18 @@ a:focus-visible {
     <img src="logoliste.png" alt="Un nouvel élan pour Courson‑Monteloup">
   </a>
 </div>
+
+
+<nav class="side-nav">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#objectifs">Objectifs</a></li>
+    <li><a href="#faq">Foire aux Questions</a></li>
+    <li><a href="#contact">Contacts</a></li>
+  </ul>
+</nav>
+
+
 
 <!-- CONTENU -->
 <section class="page">
