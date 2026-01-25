@@ -217,13 +217,78 @@ a:focus-visible {
   h3 { font-size: 1.15rem; }
   .block { font-size: 1rem; }
 }
+
+
+
+/* ---------- SIDE BAR ---------------*/
+
+.side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 0.6rem 0;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.side-nav a:hover {
+  color: var(--yellow);
+}
+
+.side-nav a {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
+}
+/* ---------- SIDE BAR ---------------*/
+
+
+
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<div class="header-logos">
+<div class="header-logos" id="up">
   <a href="index.html">
     <img src="logoelections.png" alt="Élections municipales 2026">
   </a>
@@ -232,8 +297,19 @@ a:focus-visible {
   </a>
 </div>
 
+<nav class="side-nav">
+  <ul>
+    <li><a href="index.html#intro">Accueil</a></li>
+    <li><a href="#up">Haut de page</a></li>
+    <li><a href="index.html#faq">Foire aux Questions</a></li>
+    <li><a href="#contact">Contacts</a></li>
+  </ul>
+</nav>
+
+
+
 <!-- CONTENU -->
-<section class="page">
+<section class="page"">
 
 <h2>Nous n’avons pas voté les subventions voirie / chaudière / façade : pourquoi&nbsp;?</h2>
 
@@ -353,7 +429,7 @@ de servir l'intégralité de notre territoire communal.
 
 
 
-<footer class="footer-contact">
+<footer class="footer-contact" id="contact">
   <div class="footer-box">
 
     <div class="footer-title">

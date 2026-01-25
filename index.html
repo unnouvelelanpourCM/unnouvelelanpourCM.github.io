@@ -429,6 +429,72 @@ a:focus-visible {
 }
 
 
+/* ---------- SIDE BAR ---------------*/
+
+.side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 0.6rem 0;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.side-nav a:hover {
+  color: var(--yellow);
+}
+
+.side-nav a {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
+}
+/* ---------- SIDE BAR ---------------*/
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 
 </style>
 </head>
@@ -437,7 +503,7 @@ a:focus-visible {
 
 <div class="page">
 
-<div class="header-logos">
+<div class="header-logos", id="intro">
   <img src="logoelections.png" alt="Élections municipales 2026">
   <img src="logoliste.png" alt="Un nouvel élan pour Courson‑Monteloup">
 </div>
@@ -466,6 +532,16 @@ a:focus-visible {
 </div>
 
 
+<nav class="side-nav">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#objectifs">Objectifs</a></li>
+    <li><a href="#faq">Foire aux Questions</a></li>
+    <li><a href="#contact">Contacts</a></li>
+  </ul>
+</nav>
+
+
 
   <div class="section-divider"></div>
 
@@ -492,7 +568,7 @@ a:focus-visible {
 
   <div class="section-divider"></div>
 
-<section class="objectifs">
+  <section class="objectifs" id="objectifs">
   <h2 class="titre-objectifs">
   <span class="brush">Nos objectifs</span>
 </h2>
@@ -556,7 +632,7 @@ sécurité des personnes et des biens.</p>
 
 <div class="separator"></div>
 
-<div class="block">
+<div class="block" id="faq">
 <h2>Foire aux questions</h2>
 
 <ul>
@@ -582,7 +658,7 @@ sécurité des personnes et des biens.</p>
 
 
 <footer class="footer-contact">
-  <div class="footer-box">
+    <div class="footer-box" id="contact">
 
     <div class="footer-title">
       <span>N’HÉSITEZ PAS À NOUS CONTACTER</span>
