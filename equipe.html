@@ -310,6 +310,73 @@ h1 {
 /* ---------- SIDE BAR ---------------*/
 
 
+/* ================= STATS COMPTEURS ================= */
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem auto 4rem;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  text-align: center;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--blue);
+  background: linear-gradient(135deg, var(--yellow) 0%, #F3DD5D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue);
+  line-height: 1.4;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+
+.stats-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 3rem auto 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .stats-title {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
 </style>
 </head>
 
@@ -354,6 +421,31 @@ Communauté de communes et les communes voisines constitue un atout précieux.
 Cette combinaison du renouveau et de l'expérience passée sera déterminante pour gérer Courson-Monteloup
 aujourd'hui et préparer son avenir avec efficacité et serénité.
 </p>
+
+
+
+<h2 class="stats-title">Chiffres clés de l'équipe</h2>
+
+<div class="stats-container">
+  <div class="stat-box">
+    <div class="stat-number">10/14</div>
+    <div class="stat-label">Habitant 10 des 14 rues de notre village</div>
+  </div>
+  
+  <div class="stat-box">
+    <div class="stat-number">7/8</div>
+    <div class="stat-label">Retraités / Actifs<br>Disponibles pour les habitants</div>
+  </div>
+  
+  <div class="stat-box">
+    <div class="stat-number">10+5</div>
+    <div class="stat-label">10 nouveaux membres<br>5 anciens élus</div>
+  </div>
+</div>
+
+
+<h2 class="stats-title">Qui sommes-nous ?</h2>
+
 
 <div class="layout">
 
