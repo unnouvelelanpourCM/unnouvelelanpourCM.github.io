@@ -579,6 +579,61 @@ html {
 }
 
 
+
+/* FAQ */
+
+.faq-liste {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.faq-liste li {
+  margin: 0.8rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #F3DD5D;
+}
+
+.faq-liste a {
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: #F3DD5D;
+  text-underline-offset: 3px;
+}
+
+.faq-reponse {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  border-left: 4px solid #F3DD5D;
+  background: #fafafa;
+  border-radius: 0 8px 8px 0;
+}
+
+.faq-reponse h3 {
+  color: var(--blue);
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.faq-retour {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 2px solid #F3DD5D;
+}
+
+.faq-retour:hover {
+  color: #000;
+}
+
+
+
+
+
 </style>
 </head>
 
@@ -768,39 +823,60 @@ sécurité des personnes et des biens.</p>
 <div class="block" id="faq">
 <h2>Foire aux questions</h2>
 
-<ul>
-  <li>
-    <strong>Pourquoi les conseillers présents dans votre liste n'ont pas voté une subvention pour refaire les routes ?</strong><br>
-    La réponse détaillée à cette question est accessible sur une  <a href="cor.html">une page dédiée</a>.
-  </li>
-  <li><strong>Pourquoi l'email du Maire aux parents d'élèves du 14 février 2026 est inadmissible?</strong>
+  <!-- LISTE DES QUESTIONS (liens) -->
+  <ul class="faq-liste">
+    <li><a href="#faq-routes">Pourquoi les conseillers présents dans votre liste n'ont pas voté une subvention pour refaire les routes ?</a></li>
+    <li><a href="#faq-email">Pourquoi l'email du Maire aux parents d'élèves du 14 février 2026 est inadmissible ?</a></li>
+    <li><a href="#faq-dispo">Quelle sera la disponibilité de votre équipe pour le village ?</a></li>
+  </ul>
+
+  <div class="section-divider"></div>
+
+    <div class="faq-reponse" id="faq-routes">
+    <h3>Pourquoi les conseillers présents dans votre liste n'ont pas voté une subvention pour refaire les routes ?</h3>
+    <p>La réponse détaillée à cette question est accessible sur <a href="cor.html">une page dédiée</a>.</p>
+    <a href="#faq" class="faq-retour">↑ Retour aux questions</a>
+  </div>
+
+
+<div class="faq-reponse" id="faq-email">
+    <h3>Pourquoi l'email du Maire aux parents d'élèves du 14 février 2026 est inadmissible ?</h3>
+    <p>
 Le 14/02 les parents ont été destinataire d’un message de monsieur le maire de Courson-Monteloup ayant pour objet les problèmes
 rencontrés dans le périscolaire. Sans minimiser les problèmes récurrents qui existent au sein du périscolaire,
 nous sommes persuadé qu’une approche différente basée sur la discussion et l’écoute devrait être privilégiée.  
+    </p><p>
 Dans l’intérêt des enfants il est primordial de préserver la sérénité entre tous les acteurs : parents, enfants, personnel périscolaire et mairie.
 Une éventuelle fermeture du périscolaire après les vacances scolaires serait un échec et aurait de graves conséquences sur le bon fonctionnement de l’école.
 Nous sommes tous concernés et nous devons donc trouver une solution ensemble.
-  </li>
+    </p>
+    <a href="#faq" class="faq-retour">↑ Retour aux questions</a>
+  </div>
 
-  <li>
-      <strong>Quelle sera la disponibilité de votre équipe pour le village ?</strong><br>
+<div class="faq-reponse" id="faq-dispo">
+    <h3>Quelle sera la disponibilité de votre équipe pour le village ?</h3>
+    <p>
+      La disponibilité du maire, des adjoints et des membres du conseil municipal est essentielle.
+      Dans une commune de petite taille comme Courson-Monteloup et dans un souci constant de limiter
+      la dépense budgétaire, les services administratifs et techniques sont allégés et beaucoup de tâches
+      et d'activités doivent être faites par les élus.
+    </p>
+    <p>À titre d'exemples parmi d'autres :</p>
+    <ul>
+      <li>Les rendez-vous demandés par les habitants en journée avec le maire ou les adjoints,</li>
+      <li>Les échanges avec le personnel communal,</li>
+      <li>Les réunions avec les fournisseurs et les prestataires externes,</li>
+      <li>Les réunions en journée à la communauté de communes à Briis, dans les syndicats ou à la préfecture,</li>
+      <li>La disponibilité pour le repas des enfants à midi en cas d'empêchement d'un membre du périscolaire avec un préavis de 2 heures.</li>
+    </ul>
+    <p>
+      Ces rendez-vous ne sont pas quotidiens mais nombreux. Ils prennent un temps significatif et nécessitent
+      parfois la présence de plus d'un élu. Notre équipe est composée de 7 jeunes retraités, y compris le maire,
+      ce qui assurera une réelle disponibilité au service de Courson-Monteloup.
+    </p>
+    <a href="#faq" class="faq-retour">↑ Retour aux questions</a>
+  </div>
 
-La disponibilité du maire, des adjoints et des membres du conseil municipal est essentielle.
-Dans une commune de petite taille comme Courson-Monteloup et dans un souci constant de limiter la dépense budgétaire, les services administratifs et techniques sont allégés
-et beaucoup de tâches et d’activités doivent être faites par les élus.
-A titre d'exemples parmi d'autres :
-<ul>
-    <li>Les rendez-vous demandés par les habitants en journée avec le maire ou les adjoints,</li>
-    <li>Les échanges avec le personnel communal,</li>
-    <li>Les réunions avec les fournisseurs et les prestataires externes,</li>
-    <li>Les réunions en journée à la communauté de communes à Briis, dans les syndicats ou à la préfecture,</li>
-    <li>La disponibilité pour le repas des enfants à midi en cas d’empêchement d’un membre du périscolaire avec un préavis de 2 heures, (Maladie, problème technique ou personnel)</li>
-</ul>
-Ces rendez-vous ne sont pas quotidiens mais nombreux. Ils prennent un temps significatif et nécessitent parfois la présence de plus d’un élu. Dans une équipe où le travail est réparti sur ses différents membres, il est impératif de compter sur la disponibilité de chacun.
-Notre équipe est composée de 7 jeunes retraités, y compris le maire, ce qui assurera une réelle disponibilité au service de Courson-Monteloup.
-
-</li>
-</ul>
 </div>
 
 
