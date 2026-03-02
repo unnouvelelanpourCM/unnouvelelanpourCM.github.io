@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pourquoi nous n’avons pas voté les subventions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root {
+  --blue: #1c3478;
+  --yellow: #F3DD5D;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--blue);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ================= LIENS INTERNES CONTENU ================= */
+
+.page a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.page a:hover {
+  color: #000;
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+
+/* ================= HEADER LOGOS ================= */
+
+.header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.header-logos a {
+  display: block;
+  max-width: 48%;
+}
+
+.header-logos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= PAGE ================= */
+
+.page {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1.5rem 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1.2rem;
+}
+
+.block {
+  font-size: 1.05rem;
+  margin-bottom: 1.8rem;
+}
+
+.separator {
+  border-top: 3px solid var(--yellow);
+  margin: 3rem 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul > li {
+  margin-bottom: 1.2rem;
+}
+
+ul ul li {
+  font-size: 0.98rem;
+}
+
+/* ================= FOOTER CONTACT ================= */
+
+
+.slogan-fin {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 4rem auto 2rem;
+    max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+  .slogan-fin {
+    white-space: normal;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+
+.footer-box {
+  position: relative;
+  border: 4px solid #F3DD5D;
+  padding: 3rem 3rem 2.5rem;
+  text-align: center;
+  max-width: 700px;
+}
+.footer-line:hover {
+  color: #F3DD5D;
+}
+
+
+
+.footer-title {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white; /* ou couleur du fond */
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.footer-title span {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+
+
+.footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-line:hover {
+  text-decoration: underline;
+}
+
+.footer-line img {
+  width: 32px;
+  height: 32px;
+}
+
+a:focus-visible {
+  outline: 3px solid #F3DD5D;
+  outline-offset: 4px;
+}
+
+
+
+.tous-ensemble {
+  display: inline-block;
+  padding: 0.15em 0.45em;
+  margin-right: 0.4em;
+  background: #F3DD5D;
+  transform: rotate(-3deg); /* légère inclinaison */
+  font-weight: 800;
+}
+
+
+
+  /* ---------- SIDE BAR ---------------*/
+
+.side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 0.6rem 0;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.side-nav a:hover {
+  color: var(--yellow);
+}
+
+.side-nav a {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
+}
+/* ---------- SIDE BAR ---------------*/
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+  .block { font-size: 1rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header-logos">
+  <a href="index.html">
+    <img src="logoelections.png" alt="Élections municipales 2026">
+  </a>
+  <a href="index.html">
+    <img src="logoliste.png" alt="Un nouvel élan pour Courson‑Monteloup">
+  </a>
+</div>
+
+
+<nav class="side-nav">
+  <ul>
+    <li><a href="index.html#intro">Introduction</a></li>
+    <li><a href="index.html#objectifs">Objectifs</a></li>
+    <li><a href="index.html#programme">Programme</a></li>
+    <li><a href="index.html#faq">Foire aux Questions</a></li>
+    <li><a href="#contact">Contacts</a></li>
+  </ul>
+</nav>
+
+
+
+<!-- CONTENU -->
+<section class="page">
+
+
+  <h2>🌿🌞 Une cour oasis pour l'école de notre village 🌞🌿</h2>
+
+  <div class="block">
+    Aujourd'hui, la cour de notre école est entièrement bétonnée, exposée en plein soleil, sans ombre, sans verdure. L'été, la chaleur y devient difficilement supportable pour nos enfants.
+  </div>
+
+  <div class="block">
+    👉 Si notre liste est élue, nous transformerons cette cour en véritable <strong>cour oasis</strong>.
+  </div>
+
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="oasis.jpg" alt="Cour oasis" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <p style="font-style: italic; font-size: 0.95rem; margin-top: 0.8rem; color: var(--blue);">
+    D'une cour d'école triste, bétonnée, en plein soleil à une cour ludique, végétalisée, ombragée où les enfants s'épanouissent.
+  </p>
+</div>
+
+
+
+  <div class="separator"></div>
+
+  <h3>🌳 Une cour végétalisée et ombragée</h3>
+  <ul>
+    <li>🌱 Végétalisée, avec des arbres, des plantations et des îlots de fraîcheur</li>
+    <li>🌤️ Ombragée, pour protéger les enfants des fortes chaleurs</li>
+    <li>🎨 Plus vivante et plus colorée</li>
+    <li>🪑 Avec des espaces calmes et variés pour jouer, discuter, lire ou rêver</li>
+  </ul>
+
+  <div class="separator"></div>
+
+  <h3>👧👦 Mettre les enfants au cœur du projet</h3>
+  <ul>
+    <li>✅ Favoriser le bien-être et la concentration</li>
+    <li>✅ Encourager des jeux plus variés et inclusifs</li>
+    <li>✅ Apaiser les tensions et réduire les conflits</li>
+    <li>✅ Stimuler la curiosité et le lien avec la nature</li>
+    <li>✅ Permettre à chaque enfant de trouver sa place</li>
+  </ul>
+
+  <div class="block">
+    Une cour plus agréable, c'est une école où l'on se sent bien.<br>
+    Et un enfant qui se sent bien apprend mieux.
+  </div>
+
+  <div class="separator"></div>
+
+  <h3>🤝 Un projet co-construit avec vous</h3>
+  <div class="block">
+    Ce projet est l'un des engagements forts de notre liste, et comme les autres, nous voulons qu'il nous rassemble. Il sera co-conçu :
+  </div>
+  <ul>
+    <li>🏫 Avec l'équipe municipale</li>
+    <li>👨‍👩‍👧‍👦 Avec les parents</li>
+    <li>🎒 Avec les enseignants</li>
+    <li>🌟 Et avec les enfants eux-mêmes, dans le cadre de projets d'école</li>
+  </ul>
+
+  <div class="block">
+    Parce que construire ensemble notre avenir est le meilleur moyen de mieux se connaître, d'apaiser les relations et d'être fiers, ensemble, de notre école et de notre village.
+  </div>
+
+  <div class="block">
+    ✅ Nous avons déjà engagé des discussions avec les partenaires techniques et financiers qui encadrent ce type de réalisation.
+  </div>
+
+  <div class="block">
+    📅 Nous vous présenterons tous les détails lors de la <strong>réunion publique du 9 mars à 20h</strong>, dans le modulaire.
+  </div>
+
+
+
+</section>
+
+    
+
+<p class="slogan-fin">
+  <span class="tous-ensemble">Tous ensemble</span>
+  donnons un nouvel élan pour Courson‑Monteloup et faisons rayonner notre village !
+</p>
+
+
+
+
+<footer class="footer-contact">
+  <div class="footer-box">
+
+    <div class="footer-title">
+      <span>N’HÉSITEZ PAS À NOUS CONTACTER</span>
+    </div>
+
+    <a href="mailto:unnouvelelanpourcm@gmail.com" class="footer-line">
+      <img src="email.jpg" alt="Email">
+      <span>unnouvelelanpourcm@gmail.com</span>
+    </a>
+
+    <a href="https://www.facebook.com/unnouvelelanpourcoursonmonteloup"
+       class="footer-line"
+       target="_blank" rel="noopener">
+      <img src="fb.avif" alt="Facebook">
+      <span>Un nouvel élan pour Courson‑Monteloup</span>
+    </a>
+
+    <a href="https://www.instagram.com/nouvelelanpourcoursonmonteloup?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+       class="footer-line"
+       target="_blank" rel="noopener">
+      <img src="insta.webp" alt="Instagram">
+      <span>Nouvel élan pour Courson‑Monteloup</span>
+    </a>
+
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
+
+
