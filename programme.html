@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pourquoi nous n’avons pas voté les subventions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root {
+  --blue: #1c3478;
+  --yellow: #F3DD5D;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--blue);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ================= LIENS INTERNES CONTENU ================= */
+
+.page a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.page a:hover {
+  color: #000;
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+
+/* ================= HEADER LOGOS ================= */
+
+.header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.header-logos a {
+  display: block;
+  max-width: 48%;
+}
+
+.header-logos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= PAGE ================= */
+
+.page {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1.5rem 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1.2rem;
+}
+
+.block {
+  font-size: 1.05rem;
+  margin-bottom: 1.8rem;
+}
+
+.separator {
+  border-top: 3px solid var(--yellow);
+  margin: 3rem 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul > li {
+  margin-bottom: 1.2rem;
+}
+
+ul ul li {
+  font-size: 0.98rem;
+}
+
+/* ================= FOOTER CONTACT ================= */
+
+
+.slogan-fin {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 4rem auto 2rem;
+    max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+  .slogan-fin {
+    white-space: normal;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+
+.footer-box {
+  position: relative;
+  border: 4px solid #F3DD5D;
+  padding: 3rem 3rem 2.5rem;
+  text-align: center;
+  max-width: 700px;
+}
+.footer-line:hover {
+  color: #F3DD5D;
+}
+
+
+
+.footer-title {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white; /* ou couleur du fond */
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.footer-title span {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+
+
+.footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-line:hover {
+  text-decoration: underline;
+}
+
+.footer-line img {
+  width: 32px;
+  height: 32px;
+}
+
+a:focus-visible {
+  outline: 3px solid #F3DD5D;
+  outline-offset: 4px;
+}
+
+
+
+.tous-ensemble {
+  display: inline-block;
+  padding: 0.15em 0.45em;
+  margin-right: 0.4em;
+  background: #F3DD5D;
+  transform: rotate(-3deg); /* légère inclinaison */
+  font-weight: 800;
+}
+
+
+
+  /* ---------- SIDE BAR ---------------*/
+
+.side-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 0.6rem 0;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.side-nav a:hover {
+  color: var(--yellow);
+}
+
+.side-nav a {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
+}
+/* ---------- SIDE BAR ---------------*/
+
+
+/* ================= SOUS-SECTIONS ================= */
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--blue);
+  border-left: 4px solid var(--yellow);
+  padding-left: 0.8rem;
+  margin: 2rem 0 1rem;
+}
+
+/* Séparateur principal (entre grandes sections) */
+.separator {
+  border: none;
+  border-top: 3px solid var(--yellow);
+  margin: 3rem 0;
+}
+
+/* Séparateur secondaire (entre sous-sections) */
+.separator-sub {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 2rem 0;
+}
+
+
+
+  /* ================= INTRO PROGRAMME ================= */
+
+.intro-programme {
+  background-color: #f9f6ee;
+  border-left: 5px solid var(--yellow);
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.intro-programme ul {
+  margin: 1rem 0 1rem 1.2rem;
+  padding: 0;
+}
+
+.intro-programme ul li {
+  margin-bottom: 0.5rem;
+}
+
+.intro-conclusion {
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: var(--blue);
+}
+
+.img-section {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+  .img-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--blue);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+  .block { font-size: 1rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header-logos">
+  <a href="index.html">
+    <img src="logoelections.png" alt="Élections municipales 2026">
+  </a>
+  <a href="index.html">
+    <img src="logoliste.png" alt="Un nouvel élan pour Courson‑Monteloup">
+  </a>
+</div>
+
+
+<nav class="side-nav">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#contact">Contacts</a></li>
+    <li><a href="#projets">Les projets du mandat</a></li>
+    <li><a href="#ecole">École et Enfance</a></li>
+    <li><a href="#village">Un Village vivant</a></li>
+    <li><a href="#mairie">Une mairie ouverte</a></li>
+    <li><a href="index.html#faq">Foire aux Questions</a></li>
+  </ul>
+</nav>
+
+
+
+<!-- CONTENU -->
+
+
+<section class="page">
+<!-- ============ INTRODUCTION ============ -->
+<div class="intro-programme">
+  <p>Voici notre programme pour les 6 prochaines années. Il s'agit de propositions et leur réalisation est conditionnée à plusieurs points :</p>
+  <ul>
+    <li>Il n'y aura pas de hausse de la taxe foncière</li>
+    <li>La co-conception avec les habitants, par l'intermédiaire de consultations, réunions publiques, au démarrage et aux étapes importantes du projet</li>
+    <li>L'obtention de subventions significatives permettant un investissement minimal de la commune</li>
+  </ul>
+  <p class="intro-conclusion">Concevoir et faire ensemble est le plus beau des projets.</p>
+</div>
+
+<div class="separator"></div>
+
+  <!-- ============ PROJETS DU MANDAT ============ -->
+  <h2 id="projets">Les projets du mandat</h2>
+
+  <div class="block">
+
+<h3 id="voirie">Voirie</h3>
+
+<img src="routes_partout.jpg" alt="Voirie à Courson‑Monteloup" class="img-section">
+
+<p>
+  Nous souhaitons que chaque partie de notre village, sans exception, puisse voir sa voirie entretenue. 
+  C'est pourquoi la réfection des routes est une priorité pour nous. Elle mérite un vrai budget, pour tous.
+</p>
+<p>
+  L'ordre de grandeur du budget pour les routes dépasse 200 000 €. Grâce au contrat rural, 
+  la région et le département financeront 140 000 € de ces travaux. Une subvention importante 
+  et unique que nous ne raterons pas. Nous ferons des choix et des priorités.
+</p>
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="eclairage">Éclairage public</h3>
+    <!-- contenu à venir -->
+<img src="eclairage_public.jpg" alt="Éclairage public à Courson‑Monteloup" class="img-section">
+
+<p>
+  Le consensus est clair : l'éclairage public est éteint trop tôt. Pour résoudre ce problème 
+  tout en faisant des économies, nous proposons le remplacement du parc de candélabres à lampes 
+  à sodium par un parc 100% LED, et le remplacement des candélabres rue de l'Horloge et du 
+  hameau Marianne qui ne sont plus conformes à la réglementation imposant l'éclairage vers le sol.
+</p>
+<p>
+  Ces travaux pourront bénéficier de subventions importantes du département et de la région, 
+  prévues exclusivement pour la modernisation de l'éclairage public.
+</p>
+
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="maintenance">Maintenance et sécurité</h3>
+    <!-- contenu à venir -->
+    <img src="maintenance.jpg" alt="Maintenance et sécurité à Courson‑Monteloup" class="img-section">
+
+<p>
+  Le bon fonctionnement de notre commune nécessite une maintenance régulière de ses installations 
+  et équipements. La liste est longue et comporte actuellement au moins 300 000 €. Nous ne pourrons 
+  pas tout faire, mais notre démarche est claire :
+</p>
+<ul>
+  <li>Faire la liste exhaustive de tous les travaux, réparations et mises aux normes nécessaires</li>
+  <li>Évaluer les coûts</li>
+  <li>Établir des priorités</li>
+  <li>Trouver les subventions</li>
+  <li>Et exécuter les travaux</li>
+</ul>
+
+    <div class="separator-sub"></div>
+
+    <h3 id="cour-oasis">Une cour oasis pour l'école</h3>
+    <!-- contenu à venir -->
+
+
+
+<p>
+  Aujourd'hui, la cour de notre école est entièrement bétonnée, exposée en plein soleil, sans ombre, 
+  sans verdure. L'été, la chaleur y devient difficilement supportable pour nos enfants.
+</p>
+
+<p>
+  👉 Si notre liste est élue, nous transformerons cette cour en véritable <strong>cour oasis</strong>.
+</p>
+
+<img src="oasis.jpg" alt="Cour oasis" class="img-section">
+<p class="img-caption">
+  D'une cour d'école triste, bétonnée, en plein soleil à une cour ludique, végétalisée, ombragée où les enfants s'épanouissent.
+</p>
+
+<div class="separator-sub"></div>
+
+<h4>🌳 Une cour végétalisée et ombragée</h4>
+<ul>
+  <li>🌱 Végétalisée, avec des arbres, des plantations et des îlots de fraîcheur</li>
+  <li>🌤️ Ombragée, pour protéger les enfants des fortes chaleurs</li>
+  <li>🎨 Plus vivante et plus colorée</li>
+  <li>🪑 Avec des espaces calmes et variés pour jouer, discuter, lire ou rêver</li>
+</ul>
+
+<div class="separator-sub"></div>
+
+<h4>👧👦 Mettre les enfants au cœur du projet</h4>
+<ul>
+  <li>✅ Favoriser le bien-être et la concentration</li>
+  <li>✅ Encourager des jeux plus variés et inclusifs</li>
+  <li>✅ Apaiser les tensions et réduire les conflits</li>
+  <li>✅ Stimuler la curiosité et le lien avec la nature</li>
+  <li>✅ Permettre à chaque enfant de trouver sa place</li>
+</ul>
+
+<p>
+  Une cour plus agréable, c'est une école où l'on se sent bien.<br>
+  Et un enfant qui se sent bien apprend mieux.
+</p>
+
+<div class="separator-sub"></div>
+
+<h4>🤝 Un projet co-construit avec vous</h4>
+<p>
+  Ce projet est l'un des engagements forts de notre liste, et comme les autres, nous voulons qu'il 
+  nous rassemble. Il sera co-conçu :
+</p>
+<ul>
+  <li>🏫 Avec l'équipe municipale</li>
+  <li>👨‍👩‍👧‍👦 Avec les parents</li>
+  <li>🎒 Avec les enseignants</li>
+  <li>🌟 Et avec les enfants eux-mêmes, dans le cadre de projets d'école</li>
+</ul>
+
+<p>
+  Parce que construire ensemble notre avenir est le meilleur moyen de mieux se connaître, 
+  d'apaiser les relations et d'être fiers, ensemble, de notre école et de notre village.
+</p>
+
+<p>
+  ✅ Nous avons déjà engagé des discussions avec les partenaires techniques et financiers 
+  qui encadrent ce type de réalisation.
+</p>
+
+<img src="roadmapoasis.jpg" alt="Roadmap cour oasis" class="img-section">
+
+
+<p>
+  L'organisation de ce projet est encadrée par le Conseil d'Architecture, d'Urbanisme et de 
+  l'Environnement (CAUE) de l'Essonne, et le Syndicat de l'Orge. 
+  Leur expérience est importante car ils ont réalisés de nombreux projets similaires
+  dont la cour oasis de l'école de Fontenay-les-Briis dernièrement.
+  Un tel projet s'étale typiquement sur 
+  un an et demi (les années sur la figure sont indicatives de cette temporalité). Des ateliers 
+  se tiendront avec les enfants, racontant l'usage de leur cour actuelle et imaginant l'usage 
+  de leur cour future, et avec les parents, la mairie et l'école, chacun apportant ses idées. 
+  Après une réunion de synthèse au cours de laquelle est proposé un projet réaliste, la mairie 
+  choisit ses prestataires, puis, avec l'aide du Syndicat de l'Orge, trouve les subventions 
+  nécessaires et engage les travaux pendant la période estivale où les enfants sont absents.
+</p>
+
+
+
+
+<div class="separator"></div>
+
+
+
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="bibliotheque">Aménagement de la bibliothèque</h3>
+    <!-- contenu à venir -->
+
+<img src="biblioamenagement.jpg" alt="Aménagement de la bibliothèque" class="img-section">
+
+<p>
+  Nous souhaitons réaménager la bibliothèque de l'école <strong>avec</strong> les enfants, 
+  pour qu'ils s'épanouissent dans un lieu qui donne envie de lire, dans le calme et l'apaisement. 
+  C'est un projet peu cher qui sera réalisé avec les enfants.
+</p>
+
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="biodiversite">Parc de la biodiversité</h3>
+    <!-- contenu à venir -->
+    <img src="parc1.jpg" alt="Parc de la biodiversité" class="img-section">
+
+<p>
+  Notre commune a récemment acquis des parcelles entre le golf et la route vers Saint-Maurice-Montcouronne.
+  Nous souhaitons valoriser l'une d'elles pour la transformer en <strong>parc de la biodiversité</strong>.
+</p>
+
+<p>
+  À l'écart du village, n'occasionnant aucune nuisance sonore, ce parc, proche de la nature, serait 
+  traversé par un sentier ludique allant d'un espace de pique-nique et de jeu, à un espace d'observation 
+  de la faune et de la flore locale, pour finir par un verger communal au sein duquel chaque enfant 
+  aura son arbre.
+</p>
+
+<p>
+  Le parc sera accessible à pied et à vélo via le chemin traversant le bois, et en voiture par la route, 
+  avec un parking sur sol végétalisé où pourraient être disponibles des bornes d'apport volontaire 
+  pour nos déchets.
+</p>
+
+<img src="parc2.jpg" alt="Parc de la biodiversité - vue 2" class="img-section">
+
+<p>
+  Comme pour tous les autres projets, les propositions que nous faisons ici seront discutées dans le 
+  cadre de réunions publiques. Nous ferons un appel à idées pour co-concevoir cet endroit agréable 
+  pour tous, des enfants aux séniors. Ce projet pourra bénéficier de subventions de la part de la 
+  région et du département, avec lesquels nous sommes déjà en contact.
+</p>
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="voie-douce">Voie douce</h3>
+    <!-- contenu à venir -->
+
+<img src="voiedouce1.jpg" alt="Voie douce - proposition 1" class="img-section">
+<img src="voiedouce2.jpg" alt="Voie douce - proposition 1 détail" class="img-section">
+
+<p>
+  Accéder aux installations (parc de loisirs, mairie, parc de la biodiversité, etc.) à vélo ou à pied 
+  est important mais n'est à ce jour pas réalisable pour tous. Nous étudions la réalisation d'un projet 
+  de liaison douce reliant nos trois pôles d'habitation. Nous avons à ce jour deux propositions à l'étude.
+</p>
+
+<p>
+  La première, représentée sur les images ci-dessus, emprunterait la bordure de la D3, aménagée dans 
+  le cadre d'un partenariat avec le département de l'Essonne, et se continuerait sur un aménagement 
+  du chemin communal sur Fontenay-les-Briis puis Courson-Monteloup pour rejoindre la route piétonne 
+  arrivant rue du Parc. Les autres bordures de route départementale étant des terrains privés 
+  (e.g. rue des Bruyères sortant de la Roncière pour rejoindre la rue de la Ferme vers le Château), 
+  ils nous sont inaccessibles.
+</p>
+
+<img src="voiedouce3.jpg" alt="Voie douce - proposition 2" class="img-section">
+<img src="voiedouce4.jpg" alt="Voie douce - proposition 2 détail" class="img-section">
+
+<p>
+  Une autre solution pourrait être d'aménager et d'emprunter l'allée du Château, plus directe. 
+  Ce terrain est cependant privé et nous discuterons prochainement avec le nouvel acquéreur de la 
+  propriété, qui nous a d'ores et déjà manifesté l'envie de travailler avec la commune.
+</p>
+
+
+
+    <div class="separator-sub"></div>
+
+    <h3 id="parc-loisir">Aménagement du parc de loisirs</h3>
+    <!-- contenu à venir -->
+
+<img src="parcloisir.jpg" alt="Parc de loisirs" class="img-section">
+
+<p>
+  Le parc de loisirs est un endroit privilégié apprécié des habitants, mais qui pourrait être mieux aménagé.
+</p>
+
+<ul>
+  <li>Il manque actuellement de bancs, que nous pourrions disposer à l'ombre des arbres et proches des jeux où sont nos enfants. Les poubelles sont également mal placées et seront repositionnées près des bancs.</li>
+  <li>Nous pourrions aménager des tables de pique-nique ombragées, pour profiter de ce bel espace et nous retrouver aux beaux jours.</li>
+  <li>Nous étudierons la possibilité d'apporter un jeu accessible dès 2 ans.</li>
+  <li>Pour les sportifs et les plus âgés, nous étudierons la possibilité d'installer, proche du city-stade et loin des habitations, une table de ping-pong d'extérieur.</li>
+</ul>
+
+<img src="sport.jpg" alt="Installations sportives" class="img-section">
+
+<p>
+  Nos installations pourraient être davantage utilisées. Hors belle saison, la nuit tombe très vite. 
+  Nous pourrions éclairer le city-stade jusqu'à 21h — pas trop tard pour éviter les attroupements tardifs — 
+  via un candélabre solaire autonome, hors réseau. De même, nous proposons l'éclairage et l'entretien 
+  du terrain de tennis, une belle installation aujourd'hui sous-utilisée, que nous souhaitons rendre 
+  accessible à tous les habitants du village.
+</p>
+
+
+
+    <div class="separator-sub"></div>
+
+
+    <h3 id="financement">Comment financer ?</h3>
+    <!-- contenu à venir -->
+
+<img src="finance1.jpg" alt="Budget de la commune" class="img-section">
+
+<p>
+  Le budget de la commune est d'un peu moins de 600 000 € en moyenne depuis 10 ans. Environ 470 000 € 
+  sont destinés au fonctionnement de la commune, et seuls 130 000 € sont disponibles pour l'investissement, 
+  sur lequel les travaux sont financés. Sur ce budget investissement, 30 000 € de remboursement de prêt 
+  déjà en cours s'étaleront d'ores et déjà sur la durée du mandat. Il nous reste <strong>100 000 € par an</strong> 
+  pour réaliser nos projets.
+</p>
+
+<p>
+  Il nous faudra donc, dans un contexte où <strong>nous n'augmenterons pas les impôts</strong> :
+</p>
+
+<ul>
+  <li>établir des priorités,</li>
+  <li>faire des choix,</li>
+  <li>réaliser des économies structurelles — chaque économie dans le fonctionnement augmente notre capacité d'investissement,</li>
+  <li>aller chercher systématiquement des subventions — un projet non subventionné est un projet non réalisé.</li>
+</ul>
+
+<img src="finance2.jpg" alt="Méthode financière" class="img-section">
+
+<p>
+  Notre méthode est claire : après une mise en concurrence rigoureuse et sur la base de plusieurs offres, 
+  la commission finances sera en charge de choisir la meilleure proposition et d'obtenir les subventions 
+  nécessaires, sans quoi le projet ne sera pas réalisé. <strong>Nous irons chercher les subventions !</strong>
+</p>
+
+<img src="finance3.jpg" alt="Exemple de financement" class="img-section">
+
+<p>
+  Sur un exemple de projet à 100 000 € HT subventionné à 70 % (exemple de la subvention « contrat rural » 
+  de la région et du département), la commune ne financera que 30 000 €. Le recours à l'emprunt initial 
+  sera intégralement équilibré par le remboursement de la TVA par l'État et le versement de la subvention 
+  une fois les travaux réalisés. Nous maîtriserons les finances et, à chaque étape, nous aurons le choix 
+  de rembourser intégralement sans avoir recours à un emprunt supplémentaire.
+</p>
+
+
+
+
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- ============ ÉCOLE ET ENFANCE ============ -->
+  <h2 id="ecole">École et Enfance</h2>
+
+  <div class="block">
+
+    <h3 id="petite-enfance">Petite enfance à Courson‑Monteloup</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="periscolaire">Périscolaire : un cercle de confiance</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="activites-enfants">Activités pour les enfants</h3>
+    <!-- contenu à venir -->
+
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- ============ UN VILLAGE VIVANT ============ -->
+  <h2 id="village">Un Village vivant</h2>
+
+  <div class="block">
+
+    <h3 id="150ans">2030 : fêter les 150 ans de la mairie‑école</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="village-anime">Un village animé</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="culture">Culture à Courson‑Monteloup</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="lieux-rencontre">Lieux de rencontre</h3>
+    <!-- contenu à venir -->
+
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- ============ UNE MAIRIE OUVERTE ============ -->
+  <h2 id="mairie">Une mairie ouverte</h2>
+
+  <div class="block">
+
+    <h3 id="transparente">Mairie transparente</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="reactive">Mairie réactive</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="communication">Mairie qui communique</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="solidaire">Mairie solidaire</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="communes-amies">Une mairie entourée de communes amies</h3>
+    <!-- contenu à venir -->
+
+    <div class="separator-sub"></div>
+
+    <h3 id="protege">Une mairie qui protège</h3>
+    <!-- contenu à venir -->
+
+  </div>
+
+</section>
+
+
+    
+
+<p class="slogan-fin">
+  <span class="tous-ensemble">Tous ensemble</span>
+  donnons un nouvel élan pour Courson‑Monteloup et faisons rayonner notre village !
+</p>
+
+
+
+
+<footer class="footer-contact">
+  <div class="footer-box">
+
+    <div class="footer-title">
+      <span>N’HÉSITEZ PAS À NOUS CONTACTER</span>
+    </div>
+
+    <a href="mailto:unnouvelelanpourcm@gmail.com" class="footer-line">
+      <img src="email.jpg" alt="Email">
+      <span>unnouvelelanpourcm@gmail.com</span>
+    </a>
+
+    <a href="https://www.facebook.com/unnouvelelanpourcoursonmonteloup"
+       class="footer-line"
+       target="_blank" rel="noopener">
+      <img src="fb.avif" alt="Facebook">
+      <span>Un nouvel élan pour Courson‑Monteloup</span>
+    </a>
+
+    <a href="https://www.instagram.com/nouvelelanpourcoursonmonteloup?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+       class="footer-line"
+       target="_blank" rel="noopener">
+      <img src="insta.webp" alt="Instagram">
+      <span>Nouvel élan pour Courson‑Monteloup</span>
+    </a>
+
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
+
+
